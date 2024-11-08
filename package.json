@@ -1,0 +1,27 @@
+{
+  "name": "Lcm",
+  "version": "0.0.1",
+  "private": true,
+  "license": "AGPL-3.0",
+  "scripts": {
+    "biome:check": "biome check . --diagnostic-level=error",
+    "biome:fix": "biome check --write .",
+    "build": "pnpm --recursive --parallel run build",
+    "codegen": "pnpm --recursive --parallel run codegen",
+    "dep:check": "pnpm dlx sherif@latest",
+    "dep:fix": "pnpm dlx sherif@latest --fix",
+    "dev": "pnpm --recursive --parallel run dev",
+    "prepare": "husky install",
+    "start": "pnpm --recursive --parallel run start",
+    "test:dev": "pnpm --recursive run test:dev",
+    "typecheck": "pnpm --recursive --parallel run typecheck"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.9.1",
+    "husky": "^9.1.6"
+  },
+  "packageManager": "pnpm@9.1.4",
+  "engines": {
+    "node": ">=16.x <=22.x"
+  }
+}

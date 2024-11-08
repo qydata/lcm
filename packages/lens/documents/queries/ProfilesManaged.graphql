@@ -1,0 +1,10 @@
+query ProfilesManaged($ownedBy: Bytes!) {
+  profiles(where: { ownedBy: $ownedBy }) {
+    ...ListProfileFields
+  }
+  lastLoggedInProfiles(first: 1, where: { profile_: { ownedBy: $ownedBy } }) {
+    profile {
+      ...ListProfileFields
+    }
+  }
+}

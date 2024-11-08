@@ -1,0 +1,5 @@
+query HandleToAddresses($handle: String!) {
+  handleToAddresses(where: { handle: $handle }) {
+    address
+  }
+}

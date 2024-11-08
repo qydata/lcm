@@ -1,0 +1,5 @@
+query SearchProfiles($ownedBy: Bytes!, $limit: Int) {
+  profiles(first: $limit, where: { ownedBy: $ownedBy }) {
+    ...ProfileFields
+  }
+}

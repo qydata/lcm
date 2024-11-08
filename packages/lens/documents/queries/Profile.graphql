@@ -1,0 +1,5 @@
+query Profile($fullHandle: String!) {
+  profiles(where: { handle_: { fullHandle: $fullHandle } }) {
+    ...ProfileFields
+  }
+}

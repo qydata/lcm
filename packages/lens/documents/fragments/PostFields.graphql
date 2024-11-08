@@ -1,0 +1,13 @@
+fragment PostFields on Post {
+  id
+  publishedOn
+  isHidden
+  isEncrypted
+  createdAt
+  by {
+    ...PublicationProfileFields
+  }
+  metadata {
+    ...AnyPublicationMetadataFields
+  }
+}
