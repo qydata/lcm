@@ -1,41 +1,36 @@
-<div align="center">
-    <img src="https://gitlab.com/-/project/61401782/uploads/c38b496de5927835cc09297a30e3167f/image.png" alt="Lcm Banner">
-    <h1>Lcm</h1>
-    <strong>Decentralized, and permissionless social media app 🌿</strong>
-</div>
-<br>
-<div align="center">
-    <a href="https://lcm.xyz/u/hey">
-        <img src="https://lens-badge.vercel.app/api/badge/lens/hey" alt="Lens">
-    </a>
-    <a href="https://vercel.com/qydata?utm_source=Lcm&utm_campaign=oss">
-        <img src="https://therealsujitk-vercel-badge.vercel.app/?app=qydata" alt="Vercel">
-    </a>
-    <a href="https://lcm.xyz/discord" alt="Discord">
-        <img src="https://img.shields.io/discord/953679040722665512.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2" alt="Discord">
-    </a>
-</div>
-<div align="center">
-    <br>
-    <a href="https://lcm.xyz"><b>lcm.xyz »</b></a>
-    <br><br>
-    <a href="https://lcm.xyz/discord"><b>Discord</b></a>
-    •
-    <a href="https://gitlab.com/yo/hey/-/issues/new"><b>Issues</b></a>
-</div>
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## 🌿 About Lcm
+## Getting Started
 
-Lcm is a cutting-edge social media application that leverages the power of [Lens Protocol](https://lens.xyz) 🌿 to create a decentralized and permissionless platform for users to interact, share, and engage with one another. With a focus on privacy, security, and user control, Lcm aims to revolutionize the social media landscape by providing a more transparent and equitable digital environment for its users.
+First, run the development server:
 
-## ✅ Community
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-For a place to have open discussions on features, voice your ideas, or get help with general questions please visit our community at [Discord](https://lcm.xyz/discord).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## 🧪 Testing
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project is tested with BrowserStack
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## ⚖️ License
+## Learn More
 
-Lcm is open-sourced software licensed under the © [AGPLv3](LICENSE).
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
