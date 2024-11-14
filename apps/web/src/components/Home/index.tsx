@@ -1,7 +1,6 @@
 import type {NextPage} from "next";
 
 import NewPost from "@components/Composer/NewPost";
-import {Leafwatch} from "@helpers/leafwatch";
 import {HomeFeedType} from "@hey/data/enums";
 import {PAGEVIEW} from "@hey/data/tracking";
 import {GridItemEight, GridItemFour, GridLayout} from "@hey/ui";
@@ -13,6 +12,7 @@ import FeedType from "./FeedType";
 import ForYou from "./ForYou";
 import Hero from "./Hero";
 import Sidebar from "./Sidebar";
+import Auth from "@components/Shared/Auth";
 
 const Home: NextPage = () => {
     const {currentProfile} = useProfileStore();
@@ -26,23 +26,34 @@ const Home: NextPage = () => {
 
     return (
         <>
-            {!loggedInWithProfile && <Hero/>}
-            <GridLayout>
+            {/*{!loggedInWithProfile && <Hero/>}*/}
+            <GridLayout className={loggedInWithProfile ? "" : "content-center"}>
                 {loggedInWithProfile ? (
-                    <GridItemEight className="space-y-5">
-                        <NewPost/>
-                        <FeedType feedType={feedType} setFeedType={setFeedType}/>
-                        {feedType === HomeFeedType.FORYOU ? (
-                            <ForYou/>
-                        ) : <></>}
-                    </GridItemEight>
+                    <>
+                        <GridItemEight className="space-y-5">
+                            <NewPost/>
+                            <FeedType feedType={feedType} setFeedType={setFeedType}/>
+                            {feedType === HomeFeedType.FORYOU ? (
+                                <ForYou/>
+                            ) : <></>}
+                        </GridItemEight>
+
+                        <GridItemFour>
+                            <Sidebar/>
+                        </GridItemFour>
+                    </>
                 ) : (
-                    <GridItemFour>
-                    </GridItemFour>
+                    <>
+                        <GridItemEight>
+                            <Hero/>
+                        </GridItemEight>
+                        <GridItemFour>
+                            <div className={`text-2xl font-bold`}>登录</div>
+                            <Auth/>
+                        </GridItemFour>
+
+                    </>
                 )}
-                <GridItemFour>
-                    <Sidebar/>
-                </GridItemFour>
             </GridLayout>
         </>
     );

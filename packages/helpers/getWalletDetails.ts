@@ -14,11 +14,11 @@ interface WalletDetails {
 const getWalletDetails = (name: string): WalletDetails => {
     const walletDetails: Record<string, WalletDetails> = {
         "Coinbase Wallet": {
-            logo: `${STATIC_IMAGES_URL}/wallets/coinbase.svg`,
+            logo: `/images/wallets/coinbase.svg`,
             name: "Coinbase Wallet"
         },
         WalletConnect: {
-            logo: `${STATIC_IMAGES_URL}/wallets/walletconnect.svg`,
+            logo: `/images/wallets/walletconnect.svg`,
             name: "WalletConnect"
         },
         ToolWallet: {
@@ -27,7 +27,7 @@ const getWalletDetails = (name: string): WalletDetails => {
         }
     };
     const defaultDetails: WalletDetails = {
-        logo: `${STATIC_IMAGES_URL}/wallets/browser-wallet.svg`,
+        logo: `/images/wallets/browser-wallet.svg`,
         name
     };
 

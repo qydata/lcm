@@ -26,7 +26,6 @@ import urlcat from "urlcat";
 
 import Badges from "./Badges";
 import Pro from "./Badges/Pro";
-import InternalTools from "./InternalTools";
 import ProfileMenu from "./Menu";
 import ScamWarning from "./ScamWarning";
 import {useAccount} from "wagmi";
@@ -56,7 +55,6 @@ const Details: FC<DetailsProps> = ({isSuspended = false, profile}) => {
     const isStaff = false;
     const {resolvedTheme} = useTheme();
     const {address} = useAccount();
-    const followType = profile?.followModule?.type;
     const misuseDetails = getMisuseDetails(profile?.id);
 
     return (
@@ -104,11 +102,6 @@ const Details: FC<DetailsProps> = ({isSuspended = false, profile}) => {
                         className="text-sm sm:text-base"
                         slug={getProfile(profile).slugWithPrefix}
                     />
-                    {profile.operations?.isFollowingMe.value ? (
-                        <div className="rounded-full bg-gray-200 px-2 py-0.5 text-xs dark:bg-gray-700">
-                            Follows you
-                        </div>
-                    ) : null}
                 </div>
             </div>
             {profile?.metadata?.bio ? (
@@ -224,7 +217,6 @@ const Details: FC<DetailsProps> = ({isSuspended = false, profile}) => {
                 </div>
             </div>
             <Badges id={profile?.id}/>
-            <InternalTools profile={profile}/>
         </div>
     );
 };

@@ -1,8 +1,6 @@
 import {FC, useEffect, useState} from "react";
 import type {Connector} from "wagmi";
 import {useAccount, useConnect, useDisconnect} from "wagmi";
-
-import {Leafwatch} from "@helpers/leafwatch";
 import {KeyIcon} from "@heroicons/react/24/outline";
 import {XCircleIcon} from "@heroicons/react/24/solid";
 import {AUTH} from "@hey/data/tracking";
@@ -18,6 +16,8 @@ const WalletSelector: FC = () => {
         name: "ToolWallet",
     })
 
+    const [errNanual, setErrNanual] = useState("")
+
     useEffect(() => {
 
 // 添加其他事件监听器
@@ -29,21 +29,29 @@ const WalletSelector: FC = () => {
     }, []);
 
     const onConnect = async (connector: Connector) => {
+        setErrNanual("")
         try {
 
             if (connector.id === "toolWallet") {
-                connector.emitter.on('message', (event) => {
-                    if (event && event.type === 'display_uri') {
-                        let displayUri = event.data
+                if (window.self !== window.top) {
+                    console.log("This page is opened inside an iframe.");
+                    connector.emitter.on('message', (event) => {
+                        if (event && event.type === 'display_uri') {
+                            let displayUri = event.data
 // 子页面
-                        var value = {
-                            type: 'display_uri',
-                            data: displayUri,
-                        };
-                        window.parent.postMessage(value, "*");
-                    }
-                });
-                await connectAsync({connector});
+                            var value = {
+                                type: 'display_uri',
+                                data: displayUri,
+                            };
+                            window.parent.postMessage(value, "*");
+                        }
+                    });
+                    await connectAsync({connector});
+                } else {
+                    console.log("This page is not in an iframe.");
+                    setErrNanual("Current env wallets are not supported!")
+                }
+
             } else {
                 await connectAsync({connector});
             }
@@ -141,6 +149,12 @@ const WalletSelector: FC = () => {
                 <div className="flex items-center space-x-1 text-red-500">
                     <XCircleIcon className="size-5"/>
                     <div>{error?.message || "Failed to connect"}</div>
+                </div>
+            ) : null}
+            {errNanual ? (
+                <div className="flex items-center space-x-1 text-red-500">
+                    <XCircleIcon className="size-5"/>
+                    <div>{errNanual || "Failed to connect"}</div>
                 </div>
             ) : null}
         </div>

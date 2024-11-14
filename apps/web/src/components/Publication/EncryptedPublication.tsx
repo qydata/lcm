@@ -113,7 +113,7 @@ const EncryptedPublication: FC = ({
         }
         return (
             <div className="break-words">
-                <LockClosedIcon className="size-4 text-gray-500 mb-4"/>
+                <LockClosedIcon className="size-4 text-gray-500 mb-2"/>
 
                 {!isDesc ? (<Spinner size="sm"/>) : (
                     <Markup

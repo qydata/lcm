@@ -24,7 +24,7 @@ describe("getWalletDetails", () => {
     const walletDetails = getWalletDetails("SomeOtherWallet");
     expect(walletDetails.name).toBe("SomeOtherWallet");
     expect(walletDetails.logo).toBe(
-      `${STATIC_IMAGES_URL}/wallets/browser-wallet.svg`
+      `/images/wallets/browser-wallet.svg`
     );
   });
 
@@ -32,7 +32,7 @@ describe("getWalletDetails", () => {
     const walletDetails = getWalletDetails("");
     expect(walletDetails.name).toBe("");
     expect(walletDetails.logo).toBe(
-      `${STATIC_IMAGES_URL}/wallets/browser-wallet.svg`
+      `/images/wallets/browser-wallet.svg`
     );
   });
 });

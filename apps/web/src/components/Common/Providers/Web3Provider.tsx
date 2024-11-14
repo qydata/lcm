@@ -26,14 +26,23 @@ export const ctchain = {
         default: {name: "CT Explorer", url: "https://ctblock.cn"}
     }
 };
-
 const connectors = [
     injected(),
     walletConnect({
-        projectId: WALLETCONNECT_PROJECT_ID
+        disableProviderPing: false,
+        projectId: WALLETCONNECT_PROJECT_ID,
+        qrModalOptions: {
+            // themeMode: 'dark',
+            desktopWallets: [],
+            mobileWallets: [],
+            enableExplorer: false,
+            language: 'zh', // 设置显示语言，支持 'en'（英文）、'zh'（中文）等
+            explorerRecommendedWalletIds: "NONE",
+        },
 
     }),
     walletConnect({
+        disableProviderPing: false,
         projectId: WALLETCONNECT_PROJECT_ID,
         showQrModal: false
     }),
