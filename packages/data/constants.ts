@@ -24,7 +24,7 @@ export const ADDRESS_PLACEHOLDER = "0x03Ba3...7EF";
 
 // Application
 export const APP_NAME = "Lcm";
-export const DESCRIPTION = `${APP_NAME}.xyz 是一个去中心化、无需许可的社交媒体应用程序，使用 Lens 协议 🌿 构建`;
+export const DESCRIPTION = `${APP_NAME}.xyz 是一个去中心化、无需许可的社交媒体应用程序，一个去中心化协议驱动的全新社交网络。`;
 export const APP_VERSION = packageJson.version;
 export const BRAND_COLOR = "#FB3A5D";
 export const MAX_UINT256 = 2n ** 256n - 1n;

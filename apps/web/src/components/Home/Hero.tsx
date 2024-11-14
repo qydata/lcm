@@ -16,7 +16,7 @@ const Hero: FC = () => {
             欢迎来到 {APP_NAME},
           </div>
           <div className="ld-text-gray-500 font-extrabold text-2xl sm:text-5xl">
-            基于 Lens 协议构建的社交网络
+            一个去中心化协议驱动的全新社交网络。
           </div>
         </div>
       </div>

@@ -100,6 +100,7 @@ const nextConfig = {
     },
     output: "export",
     distDir: 'dist',
+    productionBrowserSourceMaps: false, // 禁用生成 source map 文件
 };
 
 module.exports = withSentryConfig(nextConfig);
