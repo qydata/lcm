@@ -36,7 +36,6 @@ const connectors = [
             desktopWallets: [],
             mobileWallets: [],
             enableExplorer: false,
-            language: 'zh', // 设置显示语言，支持 'en'（英文）、'zh'（中文）等
             explorerRecommendedWalletIds: "NONE",
         },
 

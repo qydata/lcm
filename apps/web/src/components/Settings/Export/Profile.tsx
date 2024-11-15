@@ -2,8 +2,6 @@ import type {Profile as TProfile} from "@hey/lens";
 import {useProfileLazyQuery} from "@hey/lens";
 import type {FC} from "react";
 import {useState} from "react";
-
-import {Leafwatch} from "@helpers/leafwatch";
 import {SETTINGS} from "@hey/data/tracking";
 import downloadJson from "@hey/helpers/downloadJson";
 import {Button, Card, CardHeader} from "@hey/ui";

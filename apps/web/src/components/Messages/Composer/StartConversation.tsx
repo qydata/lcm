@@ -5,7 +5,6 @@ import {useEffect, useRef, useState} from "react";
 import type {Address} from "viem";
 
 import LazyDefaultProfile from "@components/Shared/LazyDefaultProfile";
-import {Leafwatch} from "@helpers/leafwatch";
 import {ArrowRightCircleIcon, EnvelopeIcon, NoSymbolIcon} from "@heroicons/react/24/outline";
 import {MESSAGES} from "@hey/data/tracking";
 import {Button, EmptyState, Input} from "@hey/ui";

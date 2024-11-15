@@ -2,7 +2,6 @@ import type {FC} from "react";
 import {useState} from "react";
 
 import errorToast from "@helpers/errorToast";
-import {Leafwatch} from "@helpers/leafwatch";
 import {CheckIcon, ExclamationTriangleIcon, FaceFrownIcon, FaceSmileIcon} from "@heroicons/react/24/outline";
 import {HeyLensSignup} from "@hey/abis";
 import {APP_NAME, HANDLE_PREFIX, LCM_LENS_SIGNUP, SIGNUP_PRICE, ZERO_ADDRESS} from "@hey/data/constants";

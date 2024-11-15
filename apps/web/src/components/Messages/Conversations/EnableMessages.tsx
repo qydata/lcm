@@ -1,7 +1,5 @@
 import type {FC} from "react";
 import {useState} from "react";
-
-import {Leafwatch} from "@helpers/leafwatch";
 import {loadKeys, storeKeys} from "@helpers/xmtp/keys";
 import {CursorArrowRaysIcon} from "@heroicons/react/24/outline";
 import {MESSAGES} from "@hey/data/tracking";

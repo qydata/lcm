@@ -2,7 +2,6 @@ import type {FC} from "react";
 import {useState} from "react";
 
 import errorToast from "@helpers/errorToast";
-import {Leafwatch} from "@helpers/leafwatch";
 import {RsaSignUp, STATIC_IMAGES_URL} from "@hey/data/constants";
 import {AUTH} from "@hey/data/tracking";
 import {Button, H4, Spinner} from "@hey/ui";

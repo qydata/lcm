@@ -6,7 +6,6 @@ import sha256 from "@hey/helpers/sha256";
 
 import SwitchNetwork from "@components/Shared/SwitchNetwork";
 import errorToast from "@helpers/errorToast";
-import {Leafwatch} from "@helpers/leafwatch";
 import {KeyIcon} from "@heroicons/react/24/outline";
 import {AUTH} from "@hey/data/tracking";
 import {Button, Card} from "@hey/ui";

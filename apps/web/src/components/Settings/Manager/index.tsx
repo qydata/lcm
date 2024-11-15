@@ -19,7 +19,7 @@ const ManagerSettings: NextPage = () => {
   const { currentProfile } = useProfileStore();
   const { address } = useAccount();
 
-  const disabled = currentProfile?.ownedBy !== address.toLowerCase();
+  const disabled = currentProfile?.ownedBy !== address?.toLowerCase();
 
   useEffect(() => {
     console.log(PAGEVIEW, { page: "settings", subpage: "manager" });

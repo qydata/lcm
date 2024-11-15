@@ -1,17 +1,13 @@
-import type { Profile, ProfileSearchRequest } from "@hey/lens";
-import type { FC } from "react";
+import type {Profile, ProfileSearchRequest} from "@hey/lens";
+import {useSearchProfilesQuery} from "@hey/lens";
+import type {FC} from "react";
 
 import UserProfilesShimmer from "@components/Shared/Shimmer/UserProfilesShimmer";
 import UserProfile from "@components/Shared/UserProfile";
-import { UsersIcon } from "@heroicons/react/24/outline";
-import { ProfileLinkSource } from "@hey/data/tracking";
-import {
-  CustomFiltersType,
-  LimitType,
-  useSearchProfilesQuery
-} from "@hey/lens";
-import { Card, EmptyState, ErrorMessage } from "@hey/ui";
-import { Virtuoso } from "react-virtuoso";
+import {UsersIcon} from "@heroicons/react/24/outline";
+import {ProfileLinkSource} from "@hey/data/tracking";
+import {Card, EmptyState, ErrorMessage} from "@hey/ui";
+import {Virtuoso} from "react-virtuoso";
 
 interface ProfilesProps {
   query: string;
@@ -21,12 +17,12 @@ const Profiles: FC<ProfilesProps> = ({ query }) => {
   const request: ProfileSearchRequest = {
     limit: 25,
     query,
-    where: { customFilters: [CustomFiltersType.Gardeners] }
+    where: { customFilters: [] }
   };
 
   const { data, error, fetchMore, loading } = useSearchProfilesQuery({
     skip: !query,
-    variables: { request }
+    variables: request
   });
 
   const search = data?.searchProfiles;

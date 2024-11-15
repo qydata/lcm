@@ -3,7 +3,6 @@ import type {NextPage} from "next";
 import MetaTags from "@components/Common/MetaTags";
 import NotLoggedIn from "@components/Shared/NotLoggedIn";
 import WrongWallet from "@components/Shared/Settings/WrongWallet";
-import {Leafwatch} from "@helpers/leafwatch";
 import {APP_NAME} from "@hey/data/constants";
 import {PAGEVIEW} from "@hey/data/tracking";
 import {GridItemEight, GridItemFour, GridLayout} from "@hey/ui";
@@ -19,7 +18,7 @@ import ProfileGuardianSettings from "./ProfileGuardian";
 const DangerSettings: NextPage = () => {
     const {currentProfile} = useProfileStore();
     const {address} = useAccount();
-    const disabled = currentProfile?.ownedBy.toLowerCase() !== address.toLowerCase();
+    const disabled = currentProfile?.ownedBy.toLowerCase() !== address?.toLowerCase();
 
     useEffect(() => {
         console.log(PAGEVIEW, {page: "settings", subpage: "danger"});

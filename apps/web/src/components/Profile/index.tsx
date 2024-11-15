@@ -5,7 +5,6 @@ import type {NextPage} from "next";
 import MetaTags from "@components/Common/MetaTags";
 import NewPost from "@components/Composer/NewPost";
 import Cover from "@components/Shared/Cover";
-import {Leafwatch} from "@helpers/leafwatch";
 import {APP_NAME, HANDLE_PREFIX, STATIC_IMAGES_URL} from "@hey/data/constants";
 import {PAGEVIEW} from "@hey/data/tracking";
 import getProfile from "@hey/helpers/getProfile";

@@ -1,5 +1,5 @@
-import type { Publication } from "@hey/lens";
-import type { FC } from "react";
+import type {Post} from "@hey/lens";
+import type {FC} from "react";
 
 import PublicationWrapper from "@components/Shared/PublicationWrapper";
 import usePushToImpressions from "src/hooks/usePushToImpressions";

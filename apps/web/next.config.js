@@ -28,7 +28,6 @@ const nextConfig = {
         ];
     },
     poweredByHeader: false,
-    productionBrowserSourceMaps: true,
     reactStrictMode: false,
     redirects() {
         return [
@@ -37,41 +36,7 @@ const nextConfig = {
                 permanent: false,
                 source: "/signup"
             },
-            {
-                destination: "https://discord.com/invite/B8eKhSSUwX",
-                permanent: true,
-                source: "/discord"
-            },
-            {
-                destination:
-                    "https://zora.co/collect/zora:0xf2086c0eaa8b34b0eef73920d0b1b53f4146e2e4/1?referrer=0x03Ba34f6Ea1496fa316873CF8350A3f7eaD317EF",
-                permanent: true,
-                source: "/zorb"
-            },
-            {
-                destination:
-                    "https://explorer.gitcoin.co/#/round/10/44/14?utm_source=lcm.xyz",
-                permanent: true,
-                source: "/gitcoin"
-            },
-            // Forms
-            {
-                destination:
-                    "https://hey.height.app/?taskForm=Token-Allowlist-Request-mwarXOg6ks0A",
-                permanent: true,
-                source: "/-/token-request"
-            },
-            {
-                destination: "https://tana.pub/EltxDvrSt3Yn/hey-changelog",
-                permanent: true,
-                source: "/-/changelog"
-            },
-            {
-                destination:
-                    "https://yoginth.notion.site/ff1926a080fa44bc9d40ee534f627949",
-                permanent: true,
-                source: "/-/mod-guide"
-            },
+
             // Redirect: lcm.xyz/u/lens/<localname> > lcm.xyz/u/<localname>
             {
                 destination: "/u/:handle",

@@ -1,9 +1,7 @@
-import type {Publication, Profile} from "@hey/lens";
+import type {Profile, Publication} from "@hey/lens";
 import type {APITypes} from "plyr-react";
 import type {ChangeEvent, FC} from "react";
 import {useRef, useState} from "react";
-
-import {Leafwatch} from "@helpers/leafwatch";
 import {PauseIcon, PlayIcon} from "@heroicons/react/24/solid";
 import {PUBLICATION} from "@hey/data/tracking";
 import getProfile from "@hey/helpers/getProfile";

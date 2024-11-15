@@ -3,7 +3,6 @@ import {useState} from "react";
 
 import IndexStatus from "@components/Shared/IndexStatus";
 import errorToast from "@helpers/errorToast";
-import {Leafwatch} from "@helpers/leafwatch";
 import {MinusCircleIcon} from "@heroicons/react/24/outline";
 import {TokenHandleRegistry} from "@hey/abis";
 import {TOKEN_HANDLE_REGISTRY} from "@hey/data/constants";

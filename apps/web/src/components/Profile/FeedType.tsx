@@ -1,6 +1,4 @@
 import type {Dispatch, FC, SetStateAction} from "react";
-
-import {Leafwatch} from "@helpers/leafwatch";
 import {PencilSquareIcon} from "@heroicons/react/24/outline";
 import {PROFILE} from "@hey/data/tracking";
 import {TabButton} from "@hey/ui";

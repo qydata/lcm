@@ -4,7 +4,6 @@ import type {FC} from "react";
 import {useState} from "react";
 
 import errorToast from "@helpers/errorToast";
-import {Leafwatch} from "@helpers/leafwatch";
 import {CheckCircleIcon} from "@heroicons/react/24/solid";
 import {PROFILE} from "@hey/data/tracking";
 import getAvatar from "@hey/helpers/getAvatar";

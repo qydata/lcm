@@ -9,7 +9,6 @@ import {object, string, union} from "zod";
 import ChooseFile from "@components/Shared/ChooseFile";
 import ImageCropperController from "@components/Shared/ImageCropperController";
 import errorToast from "@helpers/errorToast";
-import {Leafwatch} from "@helpers/leafwatch";
 import uploadCroppedImage, {readFile} from "@helpers/profilePictureUtils";
 import {uploadDataToIPFS} from "@helpers/uploadToIPFS";
 import {InformationCircleIcon, PencilIcon} from "@heroicons/react/24/outline";

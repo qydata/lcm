@@ -1,4 +1,4 @@
-import type { PrimaryPublication } from "@hey/lens";
+import type { Post } from "@hey/lens";
 import type { FC } from "react";
 
 import PublicationWrapper from "@components/Shared/PublicationWrapper";
@@ -11,7 +11,7 @@ import PublicationHeader from "./PublicationHeader";
 
 interface QuotedPublicationProps {
   isNew?: boolean;
-  publication: PrimaryPublication;
+  publication: Post;
 }
 
 const QuotedPublication: FC<QuotedPublicationProps> = ({

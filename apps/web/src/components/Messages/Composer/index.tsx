@@ -2,11 +2,8 @@ import type {CachedConversation} from "@xmtp/react-sdk";
 import {useSendMessage} from "@xmtp/react-sdk";
 import type {ChangeEvent, FC} from "react";
 import {useEffect, useRef, useState} from "react";
-
-import {Leafwatch} from "@helpers/leafwatch";
 import {MESSAGES} from "@hey/data/tracking";
 import {Button, Input} from "@hey/ui";
-import {PaperAirplaneIcon} from "@heroicons/react/24/solid";
 
 interface ComposerProps {
     conversation: CachedConversation;

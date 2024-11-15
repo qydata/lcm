@@ -2,7 +2,6 @@ import NewAttachments from "@components/Composer/NewAttachments";
 import {AudioPublicationSchema} from "@components/Shared/Audio";
 import {GatedClient} from "@components/encCommon";
 import errorToast from "@helpers/errorToast";
-import {Leafwatch} from "@helpers/leafwatch";
 import {uploadDataToIPFS} from "@helpers/uploadToIPFS";
 import {LensHub} from "@hey/abis";
 import {KNOWN_ATTRIBUTES, LENS_HUB, ZERO_ADDRESS} from "@hey/data/constants";

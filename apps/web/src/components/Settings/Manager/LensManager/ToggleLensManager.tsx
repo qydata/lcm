@@ -3,7 +3,6 @@ import {useState} from "react";
 
 import IndexStatus from "@components/Shared/IndexStatus";
 import errorToast from "@helpers/errorToast";
-import {Leafwatch} from "@helpers/leafwatch";
 import {CheckCircleIcon, XMarkIcon} from "@heroicons/react/24/outline";
 import {LensHub} from "@hey/abis";
 import {LENS_HUB} from "@hey/data/constants";

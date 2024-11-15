@@ -4,7 +4,6 @@ import MetaTags from "@components/Common/MetaTags";
 import CommentSuspendedWarning from "@components/Shared/CommentSuspendedWarning";
 import Footer from "@components/Shared/Footer";
 import UserProfile from "@components/Shared/UserProfile";
-import {Leafwatch} from "@helpers/leafwatch";
 import {APP_NAME} from "@hey/data/constants";
 import {PAGEVIEW, ProfileLinkSource} from "@hey/data/tracking";
 import getProfile from "@hey/helpers/getProfile";

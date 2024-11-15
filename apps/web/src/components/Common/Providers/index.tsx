@@ -10,7 +10,6 @@ import Layout from "../Layout";
 import OptimisticTransactionsProvider from "./OptimisticTransactionsProvider";
 import ServiceWorkerProvider from "./ServiceWorkerProvider";
 import Web3Provider from "./Web3Provider";
-import LeafwatchProvider from "@components/Common/Providers/LeafwatchProvider";
 
 const lensApolloClient = apolloClient(authLink);
 const queryClient = new QueryClient({

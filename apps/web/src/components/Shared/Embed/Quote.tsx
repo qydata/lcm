@@ -1,4 +1,4 @@
-import type { PrimaryPublication } from "@hey/lens";
+import type { Post } from "@hey/lens";
 import type { FC } from "react";
 
 import QuotedPublication from "@components/Publication/QuotedPublication";
@@ -6,7 +6,7 @@ import QuotedPublication from "@components/Publication/QuotedPublication";
 import Wrapper from "./Wrapper";
 
 interface QuoteProps {
-  publication: PrimaryPublication;
+  publication: Post;
 }
 
 const Quote: FC<QuoteProps> = ({ publication }) => {

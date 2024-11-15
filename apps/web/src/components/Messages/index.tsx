@@ -1,7 +1,6 @@
 import type {NextPage} from "next";
 
 import MetaTags from "@components/Common/MetaTags";
-import {Leafwatch} from "@helpers/leafwatch";
 import {loadKeys} from "@helpers/xmtp/keys";
 import {InboxIcon} from "@heroicons/react/24/outline";
 import {APP_NAME} from "@hey/data/constants";

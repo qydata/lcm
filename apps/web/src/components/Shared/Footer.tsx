@@ -1,6 +1,4 @@
 import type {FC} from "react";
-
-import {Leafwatch} from "@helpers/leafwatch";
 import {APP_NAME} from "@hey/data/constants";
 import {MISCELLANEOUS} from "@hey/data/tracking";
 import cn from "@hey/ui/cn";
