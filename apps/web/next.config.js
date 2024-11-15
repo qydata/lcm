@@ -1,4 +1,7 @@
 const {withSentryConfig} = require("@sentry/nextjs");
+// next.config.js
+const fs = require('fs');
+const path = require('path');
 
 const allowedBots =
     ".*(bot|telegram|baidu|bing|yandex|iframely|whatsapp|facebook).*";
@@ -66,6 +69,27 @@ const nextConfig = {
     output: "export",
     distDir: 'dist',
     productionBrowserSourceMaps: false, // 禁用生成 source map 文件
+    productionSourceMaps: false,
+    webpack: (config, {dev, isServer}) => {
+        if (!dev && !isServer) {
+            // 移除 .map 文件
+            config.devtool = false;
+            // 在生成后清理 .map 文件
+            config.plugins.push({
+                apply: (compiler) => {
+                    compiler.hooks.afterEmit.tap('RemoveSourceMapPlugin', (compilation) => {
+                        const outputDir = compilation.options.output.path;
+                        fs.readdirSync(outputDir).forEach((file) => {
+                            if (file.endsWith('.map')) {
+                                fs.unlinkSync(path.join(outputDir, file));
+                            }
+                        });
+                    });
+                },
+            });
+        }
+        return config;
+    },
 };
 
 module.exports = withSentryConfig(nextConfig);
