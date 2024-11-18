@@ -35,9 +35,6 @@ importers:
       '@lcm/data':
         specifier: workspace:*
         version: link:packages/data
-      '@lcm/db':
-        specifier: workspace:*
-        version: link:packages/db
       '@lcm/helpers':
         specifier: workspace:*
         version: link:packages/helpers

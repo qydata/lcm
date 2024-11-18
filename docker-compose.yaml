@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   app:
-    image: lcm
+    image: registry.cn-hangzhou.aliyuncs.com/ctexploder/ctexploder-lcm:latest
     ports:
-      - "3000:4783"
+      - "3000:3000"
     restart: always # 可选，确保容器崩溃后自动重启

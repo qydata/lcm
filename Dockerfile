@@ -1,35 +1,37 @@
 # Stage 1: Build
 FROM node:18 AS builder
-
 WORKDIR /app
 
 RUN corepack enable
 
-# 拷贝项目文件
-COPY ./ ./
+# 拷贝必要文件
+COPY package.json pnpm-lock.yaml ./
+RUN pnpm install --frozen-lockfile
 
-# 安装依赖并构建
-RUN pnpm install --frozen-lockfile   # 确保锁文件固定版本，避免不必要的变化
-RUN pnpm build
+COPY ./ ./
+RUN pnpm run build
 
 # Stage 2: Production
 FROM node:18-slim AS runner
-
 WORKDIR /app
 
-RUN corepack enable
+RUN addgroup --system --gid 1001 nodejs \
+    && adduser --system --uid 1001 nextjs
 
-# 仅复制生产构建结果和必要的文件
-COPY --from=builder /app/.next /app/.next
-COPY --from=builder /app/public /app/public
-COPY --from=builder /app/package.json /app/package.json
-COPY --from=builder /app/pnpm-lock.yaml /app/pnpm-lock.yaml
+# Set the correct permission for prerender cache
+RUN mkdir .next
+RUN chown nextjs:nodejs .next
 
-# 安装生产依赖（确保工作区依赖被正确安装）
-RUN pnpm install --prod --frozen-lockfile
+# 仅复制生产所需的文件
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+RUN chmod +rx ./server.js
 
-# 暴露端口
+USER nextjs
+
 EXPOSE 3000
+ENV PORT 3000
 
-# 启动 Next.js 应用
-CMD ["pnpm", "start"]
+CMD ["node", "server.js"]

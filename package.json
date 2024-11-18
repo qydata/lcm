@@ -20,7 +20,6 @@
     "@heroicons/react": "^2.1.5",
     "@lcm/abis": "workspace:*",
     "@lcm/data": "workspace:*",
-    "@lcm/db": "workspace:*",
     "@lcm/helpers": "workspace:*",
     "@lcm/icons": "workspace:*",
     "@lcm/image-cropper": "workspace:*",
