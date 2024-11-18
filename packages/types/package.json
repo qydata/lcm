@@ -1,0 +1,18 @@
+{
+  "name": "@lcm/types",
+  "version": "0.0.0",
+  "private": true,
+  "license": "AGPL-3.0",
+  "main": "index.ts",
+  "scripts": {
+    "typecheck": "tsc --pretty"
+  },
+  "dependencies": {
+    "@lcm/lens": "workspace:*",
+    "@lens-protocol/metadata": "^1.2.0"
+  },
+  "devDependencies": {
+    "@lcm/config": "workspace:*",
+    "typescript": "^5.6.2"
+  }
+}

@@ -1,0 +1,7 @@
+query Publication($forId: ID!) {
+  post(id: $forId) {
+    ... on Post {
+      ...PostFields
+    }
+  }
+}

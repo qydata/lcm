@@ -1,0 +1,27 @@
+.next
+.idea
+备注.txt
+docker.txt
+
+# 忽略 node_modules 和构建缓存
+node_modules
+.next/cache
+logs
+*.log
+
+# 忽略版本控制文件
+.git
+.gitignore
+
+# 忽略环境文件（如果不需要）
+.env
+.env.local
+
+artifacts
+.github
+cache
+.openzeppelin
+typechain-types
+packages/tsconfig
+**/generated
+generated.ts

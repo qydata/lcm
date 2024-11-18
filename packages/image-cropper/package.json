@@ -1,0 +1,21 @@
+{
+  "name": "@lcm/image-cropper",
+  "version": "0.0.0",
+  "private": true,
+  "license": "AGPL-3.0",
+  "scripts": {
+    "typecheck": "tsc --pretty"
+  },
+  "dependencies": {
+    "@lcm/ui": "workspace:*",
+    "normalize-wheel": "^1.0.1",
+    "rc-slider": "^11.1.5",
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@lcm/config": "workspace:*",
+    "@types/normalize-wheel": "^1.0.4",
+    "@types/react": "^18.3.7",
+    "typescript": "^5.6.2"
+  }
+}

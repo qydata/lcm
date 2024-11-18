@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  app:
+    image: lcm
+    ports:
+      - "3000:4783"
+    restart: always # 可选，确保容器崩溃后自动重启

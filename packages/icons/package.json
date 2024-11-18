@@ -1,0 +1,18 @@
+{
+  "name": "@lcm/icons",
+  "version": "0.0.0",
+  "private": true,
+  "license": "AGPL-3.0",
+  "main": "index.ts",
+  "scripts": {
+    "typecheck": "tsc --pretty"
+  },
+  "dependencies": {
+    "react": "^18.3.1"
+  },
+  "devDependencies": {
+    "@lcm/config": "workspace:*",
+    "@types/react": "^18.3.7",
+    "typescript": "^5.6.2"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@lcm/helpers",
+  "version": "0.0.0",
+  "private": true,
+  "license": "AGPL-3.0",
+  "scripts": {
+    "test:dev": "vitest run",
+    "typecheck": "tsc --pretty"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.11.8",
+    "@lcm/abis": "workspace:*",
+    "@lcm/data": "workspace:*",
+    "@lcm/lens": "workspace:*",
+    "@lcm/types": "workspace:*",
+    "axios": "^1.7.7",
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "omit-deep": "^0.3.0",
+    "urlcat": "^3.1.0",
+    "viem": "^2.21.9",
+    "winston": "^3.14.2"
+  },
+  "devDependencies": {
+    "@lcm/config": "workspace:*",
+    "@types/omit-deep": "^0.3.2",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.1"
+  }
+}

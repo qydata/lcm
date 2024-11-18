@@ -1,0 +1,21 @@
+query Publications(
+  $first: Int
+  $skip: Int
+  $from: Bytes!
+  $mainContentFocus: [String!]
+) {
+  posts(
+    first: $first
+    skip: $skip
+    orderBy: createdAt
+    orderDirection: desc
+    where: {
+      metadata_: { mainContentFocus_in: $mainContentFocus }
+      by_: { id: $from }
+    }
+  ) {
+    ... on Post {
+      ...PostFields
+    }
+  }
+}

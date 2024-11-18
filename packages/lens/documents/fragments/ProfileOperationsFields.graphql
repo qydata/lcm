@@ -1,0 +1,6 @@
+fragment ProfileOperationsFields on ProfileOperations {
+  id
+  isBlockedByMe
+  isFollowedByMe
+  isFollowingMe
+}

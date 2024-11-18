@@ -1,0 +1,63 @@
+fragment AnyPublicationMetadataFields on PublicationMetadata {
+  id
+  content
+  tags
+  title
+  mainContentFocus
+  sharingLink
+  encryptedWith {
+    id
+    encryptedPaths
+    encryptionKey
+    accessCondition {
+      id
+      __typename
+      address
+      publicKey
+      encryptionKey
+    }
+    __typename
+  }
+  attributes {
+    ...MetadataAttributeFields
+  }
+  asset {
+    artist
+    video {
+      optimized {
+        uri
+      }
+      raw {
+        ...EncryptableImageFields
+      }
+    }
+    cover {
+      optimized {
+        uri
+      }
+      raw {
+        ...EncryptableImageFields
+      }
+    }
+    audio {
+      optimized {
+        uri
+      }
+      raw {
+        ...EncryptableImageFields
+      }
+    }
+    image {
+      optimized {
+        uri
+      }
+      raw {
+        ...EncryptableImageFields
+      }
+    }
+    license
+  }
+  attachments {
+    ...EncryptableImageFields
+  }
+}

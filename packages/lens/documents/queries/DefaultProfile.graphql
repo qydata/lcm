@@ -1,0 +1,5 @@
+query DefaultProfile($for: Bytes!) {
+  profiles(first: 1, where: { ownedBy: $for }) {
+    ...ProfileFields
+  }
+}

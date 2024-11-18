@@ -1,0 +1,20 @@
+fragment ProfileFields on Profile {
+  id
+  handle {
+    ...HandleInfoFields
+  }
+  ownedBy
+  createdAt
+  operations {
+    ...ProfileOperationsFields
+  }
+  signInfo {
+    user
+    encPrivateKey
+    publicKey
+  }
+  metadata {
+    ...ProfileMetadataFields
+  }
+  peerToPeerRecommendedByMe
+}
