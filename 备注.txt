@@ -1,6 +1,0 @@
-1. @noble/secp256k1  修改 nodeScrypt 为 null
-E:\Shqy\server\projects\2024\hey\node_modules\.pnpm\@noble+secp256k1@1.7.1\node_modules\@noble\secp256k1\lib\esm\index.js
-
-2.
-
-

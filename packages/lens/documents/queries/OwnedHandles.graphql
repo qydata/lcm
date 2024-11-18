@@ -1,7 +1,0 @@
-query OwnedHandles($for: ID!) {
-  ownedHandles(id: $for) {
-    items {
-      ...HandleInfoFields
-    }
-  }
-}

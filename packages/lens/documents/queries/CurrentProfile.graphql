@@ -1,8 +1,0 @@
-query CurrentProfile($id: ID!) {
-  profile(id: $id) {
-    ...ProfileFields
-    handle {
-      ...HandleInfoFields
-    }
-  }
-}
