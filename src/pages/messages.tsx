@@ -10,11 +10,12 @@ const XMTPMessages = () => {
   const { currentProfile } = useProfileStore();
 
   if (!currentProfile) {
-    return <Custom404 />;
+    // return <Custom404 />;
+    return  <div className="page-center flex-col">请先登录</div>;
   }
 
   return (
-    <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
+      <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
       <Messages />
     </XMTPProvider>
   );
