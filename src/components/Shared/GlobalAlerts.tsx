@@ -1,38 +1,34 @@
-import type { FC } from "react";
-
-import GardenerActions from "@components/Publication/Actions/HigherActions/GardenerActions";
-import { Alert } from "@lcm/ui";
-import { useGlobalAlertStateStore } from "src/store/non-persisted/useGlobalAlertStateStore";
+import type {FC} from "react";
+import {useState} from "react";
+import {Alert} from "@lcm/ui";
+import {useGlobalAlertStateStore} from "src/store/non-persisted/useGlobalAlertStateStore";
 
 import BlockOrUnBlockProfile from "./Alert/BlockOrUnBlockProfile";
 
 const GlobalAlerts: FC = () => {
-  const {
-    blockingorUnblockingProfile,
-    modingPublication,
-    setShowGardenerActionsAlert,
-    showGardenerActionsAlert
-  } = useGlobalAlertStateStore();
 
-  const handleCloseGardenerActionsAlert = () => {
-    setShowGardenerActionsAlert(false, null);
-  };
-
-  return (
-    <>
-      {modingPublication && (
-        <Alert
-          description="Perform mod actions on this publication."
-          onClose={handleCloseGardenerActionsAlert}
-          show={showGardenerActionsAlert}
-          title="Mod actions"
-        >
-          <GardenerActions publication={modingPublication} />
-        </Alert>
-      )}
-      {blockingorUnblockingProfile && <BlockOrUnBlockProfile />}
-    </>
-  );
+    const {
+        blockingorUnblockingProfile,
+        showBlockOrUnblockAlert
+    } = useGlobalAlertStateStore();
+    const [isLoading, setIsLoading] = useState(false)
+    return (
+        <>
+            {blockingorUnblockingProfile && <BlockOrUnBlockProfile/>}
+            {false && (
+                <Alert
+                    confirmText={"Block"}
+                    description={`Are you sure you want to block?`}
+                    isDestructive
+                    isPerformingAction={isLoading}
+                    show={showBlockOrUnblockAlert}
+                    title="Block Profile"
+                    onClose={() => {
+                        console.log(1)
+                    }}/>
+            )}
+        </>
+    );
 };
 
 export default GlobalAlerts;

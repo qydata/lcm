@@ -1,17 +1,13 @@
-import type { NextPage } from "next";
+import type {NextPage} from "next";
 
-import { CheckIcon } from "@heroicons/react/24/outline";
-import {
-  APP_NAME,
-  MONTHLY_PRO_PRICE,
-  STATIC_IMAGES_URL
-} from "@lcm/data/constants";
-import { PAGEVIEW } from "@lcm/data/tracking";
+import {CheckIcon} from "@heroicons/react/24/outline";
+import {APP_NAME, MONTHLY_PRO_PRICE} from "@lcm/data/constants";
+import {PAGEVIEW} from "@lcm/data/tracking";
 import formatDate from "@lcm/helpers/datetime/formatDate";
-import { H3, H4, H5 } from "@lcm/ui";
+import {H3, H4, H5} from "@lcm/ui";
 import cn from "@lcm/ui/cn";
-import { useEffect } from "react";
-import { useProStore } from "src/store/non-persisted/useProStore";
+import {useEffect} from "react";
+import {useProStore} from "src/store/non-persisted/useProStore";
 
 import ExtendButton from "./ExtendButton";
 
@@ -71,7 +67,7 @@ const Pro: NextPage = () => {
             <img
               alt="POL"
               className="size-7"
-              src={`${STATIC_IMAGES_URL}/tokens/matic.svg`}
+              src={`/images/tokens/matic.svg`}
             />
             <span className="font-bold text-5xl text-gray-900 tracking-tight dark:text-white">
               {details.price}

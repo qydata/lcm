@@ -1,7 +1,7 @@
-import type { FC } from "react";
+import type {FC} from "react";
 
-import { APP_NAME, STATIC_IMAGES_URL } from "@lcm/data/constants";
-import { Tooltip } from "@lcm/ui";
+import {APP_NAME} from "@lcm/data/constants";
+import {Tooltip} from "@lcm/ui";
 
 const HeyProfile: FC = () => {
   return (
@@ -10,7 +10,7 @@ const HeyProfile: FC = () => {
         alt={`Profile Created on ${APP_NAME} Badge`}
         className="drop-shadow-xl"
         height={75}
-        src={`${STATIC_IMAGES_URL}/badges/hey-profile.png`}
+        src={`/images/badges/hey-profile.png`}
         width={75}
       />
     </Tooltip>

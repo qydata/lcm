@@ -1,10 +1,10 @@
-import type { MarkupLinkProps } from "@lcm/types/misc";
-import type { FC } from "react";
+import type {MarkupLinkProps} from "@lcm/types/misc";
+import type {FC} from "react";
 
-import { STATIC_IMAGES_URL } from "@lcm/data/constants";
-import { hashflags } from "@lcm/data/hashflags";
-import { prideHashtags } from "@lcm/data/pride-hashtags";
-import { PUBLICATION } from "@lcm/data/tracking";
+import {STATIC_IMAGES_URL} from "@lcm/data/constants";
+import {hashflags} from "@lcm/data/hashflags";
+import {prideHashtags} from "@lcm/data/pride-hashtags";
+import {PUBLICATION} from "@lcm/data/tracking";
 import isPrideMonth from "@lcm/helpers/isPrideMonth";
 import stopEventPropagation from "@lcm/helpers/stopEventPropagation";
 import Link from "next/link";

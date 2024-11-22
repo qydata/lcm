@@ -12,10 +12,6 @@ const EnableLensManager: FC = () => {
   const { address } = useAccount();
   const { canUseSignless } = checkDispatcherPermissions(currentProfile);
 
-  if (canUseSignless || currentProfile?.ownedBy !== address) {
-    return null;
-  }
-
   return (
     <Card as="aside" className="mb-4 space-y-2.5 p-5">
       <H5>Signless transactions</H5>

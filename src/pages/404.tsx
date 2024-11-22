@@ -1,9 +1,9 @@
-import type { FC } from "react";
+import type {FC} from "react";
 
 import MetaTags from "@components/Common/MetaTags";
-import { HomeIcon } from "@heroicons/react/24/outline";
-import { APP_NAME, STATIC_IMAGES_URL } from "@lcm/data/constants";
-import { Button, H2 } from "@lcm/ui";
+import {HomeIcon} from "@heroicons/react/24/outline";
+import {APP_NAME} from "@lcm/data/constants";
+import {Button, H2} from "@lcm/ui";
 import Link from "next/link";
 
 const Custom404: FC = () => {
@@ -14,7 +14,7 @@ const Custom404: FC = () => {
         alt="Nyan Cat"
         className="h-60"
         height={240}
-        src={`${STATIC_IMAGES_URL}/gifs/nyan-cat.gif`}
+        src={`/images/gifs/nyan-cat.gif`}
       />
       <div className="py-10 text-center">
         <H2 className="mb-4">Oops, Lost‽</H2>

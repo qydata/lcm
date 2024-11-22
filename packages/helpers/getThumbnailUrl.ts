@@ -1,9 +1,4 @@
-import type {
-  PublicationMetadataMediaAudio,
-  PublicationMetadataMediaVideo
-} from "@lcm/lens";
-
-import { STATIC_IMAGES_URL } from "@lcm/data/constants";
+import {PublicationMetadataMedia} from "@lcm/lens";
 
 import sanitizeDStorageUrl from "./sanitizeDStorageUrl";
 
@@ -14,9 +9,9 @@ import sanitizeDStorageUrl from "./sanitizeDStorageUrl";
  * @returns The thumbnail URL.
  */
 const getThumbnailUrl = (
-  metadata?: PublicationMetadataMediaAudio | PublicationMetadataMediaVideo
+  metadata?: PublicationMetadataMedia
 ): string => {
-  const fallbackUrl = `${STATIC_IMAGES_URL}/thumbnail.png`;
+  const fallbackUrl = `/images/thumbnail.png`;
 
   if (!metadata) {
     return fallbackUrl;

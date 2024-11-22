@@ -144,12 +144,6 @@ const UserProfile: FC<UserProfileProps> = ({
       ) : (
         <UserInfo />
       )}
-      {/*<FollowUnfollowButton*/}
-      {/*  hideFollowButton={hideFollowButton}*/}
-      {/*  hideUnfollowButton={hideUnfollowButton}*/}
-      {/*  profile={profile}*/}
-      {/*  small*/}
-      {/*/>*/}
     </div>
   );
 };

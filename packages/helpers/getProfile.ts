@@ -26,9 +26,7 @@ const getProfile = (
 
   const prefix = profile.handle ? "@" : "#";
   const slug = profile.handle?.localName || profile?.id;
-  const link = profile.handle
-    ? `/u/${profile.handle.localName}`
-    : `/profile/${profile?.id}`;
+  const link = `/u`;
 
   return {
     displayName: sanitizeDisplayName(profile.metadata?.displayName) || slug,

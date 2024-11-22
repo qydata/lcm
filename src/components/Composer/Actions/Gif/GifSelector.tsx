@@ -1,10 +1,8 @@
-import type { IGif } from "@lcm/types/giphy";
-import type { Dispatch, FC, SetStateAction } from "react";
-
-import { STATIC_IMAGES_URL } from "@lcm/data/constants";
-import { Input } from "@lcm/ui";
-import { useDebounce } from "@uidotdev/usehooks";
-import { useState } from "react";
+import type {IGif} from "@lcm/types/giphy";
+import type {Dispatch, FC, SetStateAction} from "react";
+import {useState} from "react";
+import {Input} from "@lcm/ui";
+import {useDebounce} from "@uidotdev/usehooks";
 
 import Categories from "./Categories";
 import Gifs from "./Gifs";
@@ -48,7 +46,7 @@ const GifSelector: FC<GifSelectorProps> = ({
         <img
           alt="Giphy"
           className="h-3"
-          src={`${STATIC_IMAGES_URL}/brands/giphy.png`}
+          src={`/images/brands/giphy.png`}
         />
       </div>
     </>

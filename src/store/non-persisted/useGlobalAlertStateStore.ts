@@ -1,4 +1,4 @@
-import type { Post, Profile } from "@lcm/lens";
+import type {Post, Profile, Publication} from "@lcm/lens";
 
 import { createTrackedSelector } from "react-tracked";
 import { create } from "zustand";

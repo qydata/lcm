@@ -1,11 +1,11 @@
-import type { FC } from "react";
+import type {FC} from "react";
 
-import { APP_NAME, STATIC_IMAGES_URL } from "@lcm/data/constants";
-import { AUTH } from "@lcm/data/tracking";
-import { Button, Card } from "@lcm/ui";
-import { useGlobalModalStateStore } from "src/store/non-persisted/useGlobalModalStateStore";
+import {APP_NAME} from "@lcm/data/constants";
+import {AUTH} from "@lcm/data/tracking";
+import {Button, Card} from "@lcm/ui";
+import {useGlobalModalStateStore} from "src/store/non-persisted/useGlobalModalStateStore";
 
-import { useSignupStore } from "./Signup";
+import {useSignupStore} from "./Signup";
 
 const SignupCard: FC = () => {
   const { setShowAuthModal } = useGlobalModalStateStore();
@@ -22,7 +22,7 @@ const SignupCard: FC = () => {
       <img
         alt="Dizzy emoji"
         className="mx-auto size-14"
-        src={`${STATIC_IMAGES_URL}/emojis/dizzy.png`}
+        src={`/images/emojis/dizzy.png`}
       />
       <div className="space-y-3 text-center">
         <div className="font-bold">立即获取您的 {APP_NAME} 个人资料！</div>

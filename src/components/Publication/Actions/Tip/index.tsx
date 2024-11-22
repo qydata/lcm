@@ -29,11 +29,11 @@ const Tip: FC<TipProps> = ({ publication, showCount }) => {
 
   const triggerConfetti = () => {
     party.resolvableShapes["moneybag"] =
-      `<img height="15" width="15" src="${STATIC_IMAGES_URL}/emojis/money-bag.png" />`;
+      `<img height="15" width="15" src="/images/emojis/money-bag.png" />`;
     party.resolvableShapes["moneywithwings"] =
-      `<img height="15" width="15" src="${STATIC_IMAGES_URL}/emojis/money-with-wings.png" />`;
+      `<img height="15" width="15" src="/images/emojis/money-with-wings.png" />`;
     party.resolvableShapes["coin"] =
-      `<img height="15" width="15" src="${STATIC_IMAGES_URL}/emojis/coin.png" />`;
+      `<img height="15" width="15" src="/images/emojis/coin.png" />`;
     party.sparkles(confettiDom.current as any, {
       count: 20,
       lifetime: 2,

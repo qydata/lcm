@@ -267,6 +267,5 @@ export enum ProfileLinkSource {
   RecentSearch = "recent-search",
   RelevantPeople = "relevant-people",
   Search = "search",
-  StaffPicks = "staff-picks",
-  WhoToFollow = "who-to-follow"
+  StaffPicks = "staff-picks"
 }

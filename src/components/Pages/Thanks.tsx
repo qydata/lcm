@@ -1,15 +1,15 @@
-import type { NextPage } from "next";
-import type { FC, ReactNode } from "react";
+import type {NextPage} from "next";
+import type {FC, ReactNode} from "react";
+import {useEffect} from "react";
 
 import Footer from "@components/Shared/Footer";
 
-import { HeartIcon } from "@heroicons/react/24/solid";
-import { APP_NAME, STATIC_IMAGES_URL } from "@lcm/data/constants";
-import { PAGEVIEW } from "@lcm/data/tracking";
-import { H2 } from "@lcm/ui";
-import { useTheme } from "next-themes";
+import {HeartIcon} from "@heroicons/react/24/solid";
+import {APP_NAME, STATIC_IMAGES_URL} from "@lcm/data/constants";
+import {PAGEVIEW} from "@lcm/data/tracking";
+import {H2} from "@lcm/ui";
+import {useTheme} from "next-themes";
 import Link from "next/link";
-import { useEffect } from "react";
 import urlcat from "urlcat";
 
 interface BrandProps {

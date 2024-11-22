@@ -1,6 +1,6 @@
-import type { FC } from "react";
+import type {FC} from "react";
 
-import { BRAND_COLOR, COVER, STATIC_IMAGES_URL } from "@lcm/data/constants";
+import {BRAND_COLOR, COVER, STATIC_IMAGES_URL} from "@lcm/data/constants";
 import imageKit from "@lcm/helpers/imageKit";
 import sanitizeDStorageUrl from "@lcm/helpers/sanitizeDStorageUrl";
 
@@ -11,7 +11,7 @@ interface CoverProps {
 const Cover: FC<CoverProps> = ({ cover }) => {
   const isDefaultCover = cover.includes(STATIC_IMAGES_URL);
   const backgroundImage = isDefaultCover
-    ? `${STATIC_IMAGES_URL}/patterns/2.svg`
+    ? `/images/patterns/2.svg`
     : imageKit(sanitizeDStorageUrl(cover), COVER);
 
   const backgroundStyles = {

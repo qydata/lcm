@@ -41,7 +41,7 @@ const Mention: FC<MarkupLinkProps> = ({ mentions, title }) => {
   return canShowUserPreview(handle) ? (
     <Link
       className="outline-none focus:underline"
-      href={`/u/${getLocalNameFromFullHandle(handle)}`}
+      href={`/u`}
       onClick={(event) => {
         stopEventPropagation(event);
         console.log(PUBLICATION.CLICK_MENTION, {

@@ -1,24 +1,28 @@
 import Messages from "@components/Messages";
-import { XMTPProvider, reactionContentTypeConfig } from "@xmtp/react-sdk";
-import { useProfileStore } from "src/store/persisted/useProfileStore";
-
-import Custom404 from "./404";
+import {reactionContentTypeConfig, XMTPProvider} from "@xmtp/react-sdk";
+import {useProfileStore} from "src/store/persisted/useProfileStore";
+import {GridItemEight, GridLayout} from "@lcm/ui";
+import Hero from "@components/Home/Hero";
 
 const contentTypeConfigs = [reactionContentTypeConfig];
 
 const XMTPMessages = () => {
-  const { currentProfile } = useProfileStore();
+    const {currentProfile} = useProfileStore();
 
-  if (!currentProfile) {
-    // return <Custom404 />;
-    return  <div className="page-center flex-col">请先登录</div>;
-  }
+    if (!currentProfile) {
+        // return <Custom404 />;
+        return (<GridLayout className={"content-center"}>
+            <GridItemEight>
+                <Hero />
+            </GridItemEight>
+        </GridLayout>);
+    }
 
-  return (
-      <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
-      <Messages />
-    </XMTPProvider>
-  );
+    return (
+        <XMTPProvider contentTypeConfigs={contentTypeConfigs}>
+            <Messages/>
+        </XMTPProvider>
+    );
 };
 
 export default XMTPMessages;

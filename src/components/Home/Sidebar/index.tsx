@@ -22,8 +22,6 @@ const Sidebar: FC = () => {
           <SetProfile />
         </>
       )}
-      {/* Recommendations */}
-      {/* {loggedInWithProfile && <WhoToFollow />} */}
       <Footer />
     </>
   );

@@ -1,10 +1,9 @@
-import type { Profile } from "@lcm/lens";
-import type { FC, ReactNode } from "react";
+import type {Profile} from "@lcm/lens";
+import type {FC, ReactNode} from "react";
 
 import Slug from "@components/Shared/Slug";
-import { STATIC_IMAGES_URL } from "@lcm/data/constants";
 import getProfile from "@lcm/helpers/getProfile";
-import { H3, Image } from "@lcm/ui";
+import {H3, Image} from "@lcm/ui";
 
 interface MetaDetailsProps {
   children: ReactNode;
@@ -32,7 +31,7 @@ const SuspendedDetails: FC<SuspendedDetailsProps> = ({ profile }) => {
           alt={profile?.id}
           className="size-32 rounded-xl bg-gray-200 ring-8 ring-gray-50 sm:size-52 dark:bg-gray-700 dark:ring-black"
           height={128}
-          src={`${STATIC_IMAGES_URL}/suspended.png`}
+          src={`/images/suspended.png`}
           width={128}
         />
       </div>

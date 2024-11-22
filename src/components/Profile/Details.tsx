@@ -1,23 +1,13 @@
-import type { Profile } from "@lcm/lens";
-import type { FC, ReactNode } from "react";
-import { useState } from "react";
+import type {Profile} from "@lcm/lens";
+import type {FC, ReactNode} from "react";
+import {useState} from "react";
 
 import Markup from "@components/Shared/Markup";
 import Slug from "@components/Shared/Slug";
 import isVerified from "@helpers/isVerified";
-import {
-  ClockIcon,
-  Cog6ToothIcon,
-  HashtagIcon,
-  MapPinIcon,
-  ShieldCheckIcon
-} from "@heroicons/react/24/outline";
-import {
-  CheckBadgeIcon,
-  ExclamationCircleIcon,
-  EyeSlashIcon
-} from "@heroicons/react/24/solid";
-import { EXPANDED_AVATAR, STATIC_IMAGES_URL } from "@lcm/data/constants";
+import {ClockIcon, Cog6ToothIcon, HashtagIcon, MapPinIcon, ShieldCheckIcon} from "@heroicons/react/24/outline";
+import {CheckBadgeIcon, ExclamationCircleIcon, EyeSlashIcon} from "@heroicons/react/24/solid";
+import {EXPANDED_AVATAR} from "@lcm/data/constants";
 import formatDate from "@lcm/helpers/datetime/formatDate";
 import getAvatar from "@lcm/helpers/getAvatar";
 import getFavicon from "@lcm/helpers/getFavicon";
@@ -27,14 +17,14 @@ import getMisuseDetails from "@lcm/helpers/getMisuseDetails";
 import getProfile from "@lcm/helpers/getProfile";
 import getProfileAttribute from "@lcm/helpers/getProfileAttribute";
 import hasMisused from "@lcm/helpers/hasMisused";
-import { Button, H3, Image, LightBox, Tooltip } from "@lcm/ui";
-import { useTheme } from "next-themes";
+import {Button, H3, Image, LightBox, Tooltip} from "@lcm/ui";
+import {useTheme} from "next-themes";
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useProfileStore } from "src/store/persisted/useProfileStore";
+import {useRouter} from "next/router";
+import {useProfileStore} from "src/store/persisted/useProfileStore";
 import urlcat from "urlcat";
 
-import { useAccount } from "wagmi";
+import {useAccount} from "wagmi";
 import Badges from "./Badges";
 import Pro from "./Badges/Pro";
 import ProfileMenu from "./Menu";
@@ -197,7 +187,7 @@ const Details: FC<DetailsProps> = ({ isSuspended = false, profile }) => {
                   alt="X Logo"
                   className="size-4"
                   height={16}
-                  src={`${STATIC_IMAGES_URL}/brands/${
+                  src={`/images/brands/${
                     resolvedTheme === "dark" ? "x-dark.png" : "x-light.png"
                   }`}
                   width={16}

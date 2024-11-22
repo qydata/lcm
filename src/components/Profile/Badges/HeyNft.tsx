@@ -1,7 +1,7 @@
-import type { FC } from "react";
+import type {FC} from "react";
 
-import { APP_NAME, STATIC_IMAGES_URL } from "@lcm/data/constants";
-import { Tooltip } from "@lcm/ui";
+import {APP_NAME} from "@lcm/data/constants";
+import {Tooltip} from "@lcm/ui";
 
 const HeyNft: FC = () => {
   return (
@@ -10,7 +10,7 @@ const HeyNft: FC = () => {
         alt={`Owner of ${APP_NAME} NFT Badge`}
         className="drop-shadow-xl"
         height={75}
-        src={`${STATIC_IMAGES_URL}/badges/hey-nft.png`}
+        src={`/images/badges/hey-nft.png`}
         width={75}
       />
     </Tooltip>
