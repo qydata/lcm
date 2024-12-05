@@ -7,17 +7,17 @@ import type { FC } from "react";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { useAccount, useWalletClient } from "wagmi";
-// 创建一个 sessionStorage 适配器
-const sessionStorageAdapter = {
+// 创建一个 localStorage 适配器
+const localStorageAdapter = {
   getItem: (key) => {
-    const value = sessionStorage.getItem(key);
+    const value = localStorage.getItem(key);
     return value ? JSON.parse(value) : null;
   },
   setItem: (key, value) => {
-    sessionStorage.setItem(key, JSON.stringify(value));
+    localStorage.setItem(key, JSON.stringify(value));
   },
   removeItem: (key) => {
-    sessionStorage.removeItem(key);
+    localStorage.removeItem(key);
   }
 };
 const EnableMessages: FC = () => {
@@ -43,7 +43,7 @@ const EnableMessages: FC = () => {
         keys,
         options: {
           env: "production",
-          storage: sessionStorageAdapter
+          storage: localStorageAdapter
         },
         signer: walletClient as any
       });

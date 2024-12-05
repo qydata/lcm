@@ -39,7 +39,7 @@
     const InpageProvider = {
         _id: 0,
         _pendingRequests: {},
-        isThetaWallet: true,
+        isCtWallet: true,
 
         _accounts: tryToGetAccounts(),
         _jsonRpcUrl: 'https://ctblock.cn/blockChain',

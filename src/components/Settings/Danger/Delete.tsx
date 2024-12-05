@@ -37,6 +37,7 @@ const DeleteSettings: FC = () => {
 
   const onCompleted = () => {
     console.log(SETTINGS.DANGER.DELETE_PROFILE);
+    console.log('onCompleted lagout 40')
     signOut();
     disconnect?.();
     location.href = "/";

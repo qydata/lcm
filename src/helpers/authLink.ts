@@ -15,6 +15,7 @@ const authLink = new ApolloLink((operation, forward) => {
   const { profile } = hydrateAuthSky();
 
   if (!profile) {
+    console.log('no profile lagout 18')
     signOut();
     return forward(operation);
   }

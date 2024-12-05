@@ -2,7 +2,7 @@ import type {FC, ReactNode} from "react";
 
 import {WALLETCONNECT_PROJECT_ID} from "@lcm/data/constants";
 import {CTCHAIN_RPCS} from "@lcm/data/rpcs";
-import {createConfig, fallback, http, WagmiProvider} from "wagmi";
+import {createConfig, createStorage, fallback, http, WagmiProvider} from "wagmi";
 import {injected, walletConnect} from "wagmi/connectors";
 
 export const ctchain = {
@@ -40,12 +40,26 @@ const connectors = [
         }
     })
 ];
+let storage;
+
+if (typeof window !== 'undefined') {
+    // 只有在客户端（浏览器）中才使用 localStorage
+    storage = createStorage({
+        storage: localStorage, // 或 cookieStorage
+    });
+} else {
+    // 如果在服务器端，可以使用一个空对象或其他替代方案
+    storage = createStorage({
+        storage: {} // 或者一个简单的内存存储
+    });
+}
 const wagmiConfig = createConfig({
     chains: [ctchain],
     connectors,
     transports: {
         [ctchain.id]: fallback(CTCHAIN_RPCS.map((rpc) => http(rpc)))
-    }
+    },
+    storage,
     // storage: createStorage({
     //     storage: cookieStorage,
     // }),

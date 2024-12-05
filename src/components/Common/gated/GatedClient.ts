@@ -258,6 +258,7 @@ export async function getOrCreateAuthSig() {
       profile: sKey.profile
     };
   } else {
+    console.log('no sKey.authSign lagout 261')
     signOut();
   }
 }
@@ -325,7 +326,7 @@ export class GatedClient {
       uri: "http://localhost:3000"
     };
     this.signer = signer;
-    const storageProvider = sessionStorage;
+    const storageProvider = localStorage;
     this.storage = createAuthStorage(storageProvider, "production");
     this.encryptionProvider = encryptionProvider;
   }

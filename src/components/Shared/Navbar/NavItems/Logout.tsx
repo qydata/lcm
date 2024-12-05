@@ -33,6 +33,7 @@ const Logout: FC<LogoutProps> = ({ className = "", onClick }) => {
       if (!profile) {
         console.log(AUTH.LOGOUT);
         resetPreferences();
+        console.log('no profile lagout 36')
         signOut();
         disconnect?.();
         location.reload();

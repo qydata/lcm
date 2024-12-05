@@ -24,16 +24,16 @@ interface State {
   signOut: () => void;
 }
 
-const sessionStorageAdapter = {
+const localstorageAdapter = {
   getItem: (key: string) => {
-    const value = sessionStorage.getItem(key);
+    const value = localStorage.getItem(key);
     return value ? JSON.parse(value) : null;
   },
   setItem: (key: string, value: any) => {
-    sessionStorage.setItem(key, JSON.stringify(value));
+      localStorage.setItem(key, JSON.stringify(value));
   },
   removeItem: (key: string) => {
-    sessionStorage.removeItem(key);
+      localStorage.removeItem(key);
   }
 };
 const store = create(
@@ -60,7 +60,7 @@ const store = create(
           (value) => value !== Localstorage.LeafwatchStore
         );
         for (const store of allLocalstorageStores) {
-          sessionStorage.removeItem(store);
+            localStorage.removeItem(store);
         }
 
         // Clean XMTP keys
@@ -70,7 +70,7 @@ const store = create(
             key.startsWith("xmtp:production:")
         );
         for (const key of keys) {
-          sessionStorage.removeItem(key);
+            localStorage.removeItem(key);
         }
 
         // Clear IndexedDB
@@ -83,8 +83,9 @@ const store = create(
       }
     }),
     {
-      name: Localstorage.AuthStore, // 存储在 sessionStorage 的键
-      storage: sessionStorageAdapter // 使用 sessionStorage
+      name: Localstorage.AuthStore, // 存储在 localStorage 的键
+      // storage: sessionStorageAdapter // 使用 sessionStorage
+      storage: localstorageAdapter // 使用 localstorageAdapter
     }
   )
 );

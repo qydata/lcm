@@ -8,7 +8,7 @@ import type {Connector} from "wagmi";
 import {useAccount, useConnect, useDisconnect} from "wagmi";
 
 const WalletSelector: FC = () => {
-    const {connectAsync, connectors, error, isPending} = useConnect();
+    const {connectAsync, connect, connectors, error, isPending} = useConnect();
     const {disconnect} = useDisconnect();
     const {connector: activeConnector} = useAccount();
 
