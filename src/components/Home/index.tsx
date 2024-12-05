@@ -19,6 +19,7 @@ const Home: NextPage = () => {
 
     useEffect(() => {
         console.log(PAGEVIEW, {page: "home"});
+        console.log(window.MyNamespace);
     }, []);
 
     const loggedInWithProfile = Boolean(currentProfile);
