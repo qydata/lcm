@@ -66,8 +66,8 @@ const nextConfig = {
   typescript: {
     ignoreBuildErrors: true
   },
-  output: 'standalone',
-  // output: "export",  // 生成静态站点
+  // output: 'standalone',  // 生成ssr部署文件
+  output: "export",  // 生成静态站点
   productionBrowserSourceMaps: false, // 禁用生成 source map 文件
   productionSourceMaps: false,
   webpack: (config, { dev, isServer }) => {

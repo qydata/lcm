@@ -215,7 +215,6 @@
                     } else {
                         data = event.data
                     }
-                    console.log('handleMessage :: data == ', data)
                     sendDebugMessage('handleMessage :: data == ');
                     if (data &&
                         (typeof data === 'object') &&
@@ -302,7 +301,6 @@
             const params = request.params || [];
 
             this._pendingRequests[request.id] = request;
-            console.log('method:', method)
             switch (method) {
                 case 'eth_requestAccounts':
                     return this._eth_requestAccounts(request);
@@ -435,7 +433,6 @@
 
     window.addEventListener('message', function (event) {
         try {
-            console.log('InpageProvider :: message event == ', event)
             if (TARGET_ORIGIN === '*' || event.origin === TARGET_ORIGIN) {
                 let data
                 if (typeof event.data === 'string') {
@@ -445,7 +442,6 @@
                 }
                 if (data.type === 'wallet_setConfig') {
                     const config = data.config;
-                    console.log('InpageProvider :: config == ', data.config);
                     window.ethereum.setConfig(config);
                 }
             } else {
