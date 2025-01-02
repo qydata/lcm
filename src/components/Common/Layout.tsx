@@ -54,8 +54,10 @@ const Layout: FC<LayoutProps> = ({children}) => {
                 logout();
             } else {
                 // 使用第一个连接器重新连接
-                if (window.ethereum.isCtWallet) {
+                if (window.ethereum && window.ethereum.isCtWallet) {
                     connect({connector: connectors[0]});
+                } else {
+                    console.error("Ethereum object not found or wallet is not CtWallet.");
                 }
             }
         }
