@@ -26,8 +26,9 @@ const VideoMimeType = [
   "video/mp4",
   "video/mpeg",
   "video/ogg",
-  "video/webm",
-  "video/quicktime"
+  "video/webm"
+  //   mov qt是苹果专用文件, 现在支持还有一些问题, 暂时注释
+  // "video/quicktime"
 ];
 
 const Attachment: FC = () => {
