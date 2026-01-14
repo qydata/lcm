@@ -1,8 +1,7 @@
 import { base64StringToBlob, blobToBase64String } from "./browser";
 import { SYMM_KEY_ALGO_PARAMS } from "./constants";
 import { decryptWithSymmetricKey, encryptWithSymmetricKey } from "./crypto";
-
-import type { ICipher, IEncryptionProvider } from "./IEncryptionProvider";
+import type { ICipher, IEncryptionProvider } from "@components/Common/gated/IEncryptionProvider";
 
 class WebCryptoCipher implements ICipher {
   private readonly encoder = new TextEncoder();

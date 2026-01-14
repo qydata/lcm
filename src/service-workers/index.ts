@@ -1,6 +1,6 @@
 declare let self: ServiceWorkerGlobalScope;
 
-const IMPRESSIONS_ENDPOINT = "https://api.lcm.xyz/leafwatch/impressions";
+const IMPRESSIONS_ENDPOINT = "https://api.tianchush.cn/leafwatch/impressions";
 const PUBLICATIONS_VISIBILITY_INTERVAL = 5000;
 const visiblePublications = new Set<string>();
 

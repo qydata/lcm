@@ -11,4 +11,4 @@ Disallow: /search?q=
 User-agent: nsa
 Disallow: /
 
-Sitemap: https://api.lcm.xyz/sitemap/sitemap.xml
+Sitemap: https://api.tianchush.cn/sitemap/sitemap.xml

@@ -6062,7 +6062,7 @@ export type Post = {
   metadata?: Maybe<PublicationMetadata>;
   openActionModules?: Maybe<Array<Scalars['String']['output']>>;
   profilesMentioned?: Maybe<Array<Scalars['String']['output']>>;
-  publication: Post;
+  publication: Publication;
   publicationTypes: PublicationType;
   publishedOn?: Maybe<Scalars['String']['output']>;
   shareFromProfileId?: Maybe<Scalars['Bytes']['output']>;
@@ -14619,3 +14619,4 @@ export type SearchProfilesQueryResult = Apollo.QueryResult<SearchProfilesQuery, 
   "possibleTypes": {}
 };
       export default result;
+    

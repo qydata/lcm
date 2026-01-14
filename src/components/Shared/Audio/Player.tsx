@@ -1,5 +1,9 @@
 import type { APITypes } from "plyr-react";
-import Plyr from "plyr-react";
+// import Plyr from "plyr-react";
+
+import dynamic from 'next/dynamic'
+const Plyr = dynamic(() => import('plyr-react'), { ssr: false })
+
 import type { FC, Ref } from "react";
 import { memo } from "react";
 import "plyr-react/plyr.css";

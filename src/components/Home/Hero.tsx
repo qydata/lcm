@@ -16,7 +16,7 @@ const Hero: FC = () => {
                         欢迎来到 {APP_NAME},
                     </div>
                     <div className="ld-text-gray-500 font-extrabold text-2xl sm:text-5xl">
-                        一个去中心化协议驱动的全新社交网络。
+                        一个区块链智能合约协议驱动的全新社交网络。
                     </div>
                 </div>
             </div>
